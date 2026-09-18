@@ -3,7 +3,8 @@
 {% assign page_description = page.description | default: site.description %}
 <title>{% if page.title and page.title != 'Home' %}{{ page.title }} | Xusheng Zhu{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ page_description | escape }}">
-<meta name="theme-color" content="#17365d">
+{% if page.noindex %}<meta name="robots" content="noindex,follow">{% endif %}
+<meta name="theme-color" content="#243a50">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{% if page.title and page.title != 'Home' %}{{ page.title }} | Xusheng Zhu{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{{ page_description | escape }}">
