@@ -1,0 +1,10 @@
+<ul class="publication-list">
+  {% for publication in include.items %}
+  <li class="publication-item">
+    <span class="pub-year">{{ publication.year }}</span>
+    <span class="pub-authors">{{ publication.authors | replace: 'X. Zhu', '<strong>X. Zhu</strong>' }}</span>,
+    “<span class="pub-title">{{ publication.title }}</span>,”
+    <span class="pub-venue">{{ publication.venue }}</span>{% if publication.details %}, {{ publication.details }}{% endif %}.
+  </li>
+  {% endfor %}
+</ul>

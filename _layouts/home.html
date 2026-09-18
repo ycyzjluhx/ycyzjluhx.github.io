@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include header.html %}
+    <main id="main-content" class="site-main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="{{ page.profile_image | relative_url }}" alt="Portrait of Xusheng Zhu">
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">University College London</p>
+            <h1>Xusheng Zhu, Ph.D.</h1>
+            <p class="hero-role">{{ page.role }}</p>
+            <p class="hero-affiliation">{{ page.affiliation }}</p>
+            <p class="hero-statement">{{ page.research_statement }}</p>
+            <div class="hero-actions" aria-label="Profile links">
+              <a class="button button-primary" href="https://scholar.google.com/citations?user=zwnN_NsAAAAJ&hl=en&oi=ao">Google Scholar</a>
+              <a class="button" href="https://orcid.org/0000-0001-8463-0373">ORCID</a>
+              <a class="button" href="mailto:xusheng.zhu@ucl.ac.uk">Email</a>
+              <a class="button" href="{{ '/assets/cv/Xusheng_Zhu_CV.pdf' | relative_url }}">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container page-container home-content">
+        {{ content }}
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

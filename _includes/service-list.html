@@ -1,0 +1,8 @@
+<ul class="service-list">
+  {% for item in include.items %}
+  <li>
+    <span class="service-role">{{ item.role }}</span>,
+    <strong>{{ item.organization }}</strong>{% if item.area %}, {{ item.area }}{% endif %}{% if item.topic %}. <span class="service-meta">{{ item.topic }}</span>{% endif %}{% if item.location %}. <span class="service-meta">{{ item.location }}</span>{% endif %}{% if item.period %}. <span class="service-meta">{{ item.period }}</span>{% endif %}.
+  </li>
+  {% endfor %}
+</ul>
